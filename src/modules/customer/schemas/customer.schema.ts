@@ -32,6 +32,11 @@ export class HackathonQuestions {
     })
     image: string;
 
+    @Prop({
+        type: [[Number]]
+    })
+    mappedRow: [number[]];
+
 }
 
 export const CustomerSchema = SchemaFactory.createForClass(HackathonQuestions);

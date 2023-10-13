@@ -20,7 +20,7 @@ export class CustomerService {
         console.log(params)
         let list = await this.customerModel.find(params).exec();
         list = list.map(item => {
-            item = _.pick(item, ["_id", "questionText", "level", "jumbledText"]);
+            item = _.pick(item, ["_id", "questionText", "level", "jumbledText", "mappedRow"]);
             return item;
           })
           return list;
