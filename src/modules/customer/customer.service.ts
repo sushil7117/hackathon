@@ -17,7 +17,6 @@ export class CustomerService {
                 level: level
             }
         }
-        console.log(params)
         let list = await this.customerModel.find(params).exec();
         list = list.map(item => {
             item = _.pick(item, ["_id", "questionText", "level", "jumbledText", "mappedRow"]);
